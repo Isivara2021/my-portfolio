@@ -34,6 +34,8 @@ import {
   SiFigma,
   SiJetbrains,
   SiPostman,
+  SiHtml5,
+  SiCss,
 } from "react-icons/si";
 
 import { VscCode } from "react-icons/vsc";
@@ -43,6 +45,8 @@ export default function Skills() {
     {
       title: "Frontend & UI",
       items: [
+        { name: "HTML", icon: SiHtml5 },
+        { name: "CSS", icon: SiCss },
         { name: "React", icon: SiReact },
         { name: "Next.js", icon: SiNextdotjs },
         { name: "TypeScript", icon: SiTypescript },
@@ -124,12 +128,13 @@ export default function Skills() {
           {groups.map((group, i) => (
             <Reveal key={group.title} delay={i * 0.06}>
               <div className="rounded-2xl border border-white/5 bg-black/30 p-6 backdrop-blur-xl transition-all hover:border-cyan-400/20">
+                
                 {/* TITLE */}
                 <h3 className="mb-6 font-mono text-sm uppercase tracking-wider text-cyan-400">
                   {group.title}
                 </h3>
 
-                {/* SKILLS AS CHIPS */}
+                {/* SKILLS */}
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((skill) => {
                     const Icon = skill.icon;
@@ -145,6 +150,7 @@ export default function Skills() {
                     );
                   })}
                 </div>
+
               </div>
             </Reveal>
           ))}

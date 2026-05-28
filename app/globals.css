@@ -55,14 +55,34 @@ section {
   outline-offset: 2px;
 }
 
+/* Keep dark inputs when browser autofills (Chrome/Android, Safari) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.92);
+  caret-color: rgba(255, 255, 255, 0.92);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.3) inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 /* ===== NEON TEXT ===== */
 .neon-text {
-  color: #00f5ff;
   font-weight: 500;
+  background: linear-gradient(90deg, #22d3ee, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   text-shadow:
-    0 0 3px rgba(0, 245, 255, 0.7),
-    0 0 6px rgba(0, 245, 255, 0.5),
-    0 0 12px rgba(0, 245, 255, 0.3);
+    0 0 3px rgba(34, 211, 238, 0.5),
+    0 0 6px rgba(168, 85, 247, 0.3),
+    0 0 12px rgba(34, 211, 238, 0.2);
 }
 
 /* ===== GLASS UI ===== */

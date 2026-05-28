@@ -64,7 +64,7 @@ export default function About() {
           {/* IMAGE */}
           <div className="lg:col-span-4 flex justify-center lg:justify-start">
             <div className="relative">
-              <div className="h-56 w-56 overflow-hidden rounded-2xl border border-cyan-500/30 bg-black/10 backdrop-blur-xl shadow-[0_0_40px_rgba(0,245,255,0.4)] sm:h-72 sm:w-72">
+              <div className="relative h-56 w-56 overflow-hidden rounded-2xl border border-cyan-500/30 bg-black/10 backdrop-blur-xl shadow-[0_0_40px_rgba(0,245,255,0.4)] sm:h-72 sm:w-72">
                 <Image
                   alt="Profile"
                   src="/profile.jpg"

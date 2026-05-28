@@ -112,7 +112,6 @@ export default function Hero() {
       </div>
 
       {/* ================= CONTENT ================= */}
-      {/* ================= CONTENT ================= */}
       <Container className="relative z-20">
         <div className="mx-auto max-w-5xl text-center">
           {/* soft aura (static background only) */}
