@@ -3,7 +3,7 @@ export type Project = {
   name: string;
   description: string;
 
-  category: "client" | "personal";
+  category: "client" | "personal" | "Assignment";
   collaboration: "group" | "individual";
   featured: boolean;
 

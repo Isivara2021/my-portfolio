@@ -22,7 +22,7 @@ const data: { projects: Project[] } = {
       id: 2,
       name: "ISIRO Steel Website",
       description:
-        "Full-stack MERN platform with admin dashboard for managing products, gallery, and business operations.",
+        "Full-stack MERN platform with admin dashboard for managing products, gallery, and news.",
 
       category: "client",
       collaboration: "individual",
@@ -44,7 +44,7 @@ const data: { projects: Project[] } = {
       collaboration: "individual",
       featured: false,
 
-      techStack: ["Typescript","Next.js", "Tailwind", "UI/UX"],
+      techStack: ["Typescript", "Next.js", "Tailwind", "UI/UX"],
 
       github: "https://github.com/Isivara2021/my-portfolio",
       live: "#",
@@ -60,27 +60,54 @@ const data: { projects: Project[] } = {
       collaboration: "group",
       featured: false,
 
-      techStack: ["Flutter","Firebase", "Dart"],
+      techStack: ["Flutter", "Firebase", "Dart"],
 
-      github: "https://github.com/Isivara2021/skill_finder_mobile_app_for_a_client",
+      github:
+        "https://github.com/Isivara2021/skill_finder_mobile_app_for_a_client",
       live: "#",
       image: "/projects/skillfinder.jpeg",
     },
     {
       id: 5,
-      name: "AI Enabled Trade Outcome Prediction Mobile App",
+      name: "Trade Analyzer Mobile App",
       description:
-        "Mobile application for finding and connecting with skilled professionals, built with Flutter and Firebase.",
+        "AI-powered mobile app that provides personalized trade outcome predictions, and supports trade analysis and portfolio management to help users optimize gains and make better investment decisions.",
 
       category: "personal",
       collaboration: "individual",
       featured: false,
 
-      techStack: ["Flutter","MySQL", "Dart"],
+      techStack: ["Flutter", "MySQL", "Dart"],
 
       github: "https://github.com/Isivara2021/trade_analyzer_demo",
       live: "#",
       image: "/projects/tradeanalyzer.png",
+    },
+    {
+      id: 6,
+      name: "FashionVision AI",
+      description:
+        "End-to-end AI-powered fashion classification system with a modern analytics dashboard. Uses a CNN model trained on the Fashion-MNIST dataset to classify clothing images in real time with ~89% accuracy.",
+
+      category: "Assignment",
+      collaboration: "group",
+      featured: false,
+
+      techStack: [
+        "TensorFlow",
+        "Keras",
+        "Flask",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "NumPy",
+        "Matplotlib",
+        "Scikit-learn",
+      ],
+
+      github: "https://github.com/Isivara2021/fashion-classificaion",
+      live: "#",
+      image: "/projects/fashionvision.png",
     },
   ],
 };
