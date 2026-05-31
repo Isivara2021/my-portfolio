@@ -1,6 +1,15 @@
 "use client";
 
-import { Cpu, Sparkles, Zap, Briefcase, GraduationCap, Layers, Smartphone, Database } from "lucide-react";
+import {
+  Cpu,
+  Sparkles,
+  Zap,
+  Briefcase,
+  GraduationCap,
+  Layers,
+  Smartphone,
+  Database,
+} from "lucide-react";
 import Reveal from "@/components/Reveal";
 import Container from "@/components/Container";
 import Image from "next/image";
@@ -99,8 +108,8 @@ export default function About() {
                 <br />
                 Currently exploring{" "}
                 <span className="text-cyan-400">
-                  machine learning, intelligent systems, and modern software
-                  architectures
+                  machine learning, intelligent systems, and software
+                  application development using .NET and C#
                 </span>
                 .
               </p>
@@ -140,12 +149,42 @@ export default function About() {
 
                     <ul className="mt-2 text-sm text-gray-400 list-disc ml-4 space-y-1">
                       <li>Full-stack web & mobile development</li>
-                      <li>Implementing DevOps & scalable cloud systems</li>
+                      <li>Collaborated on client-focused solutions.</li>
                     </ul>
                   </div>
                 </div>
 
-                {/* ITEM 2 (FIXED) */}
+                {/* ITEM 2 */}
+                <div className="flex gap-4 sm:gap-5">
+                  <div className="relative flex flex-col items-center">
+                    <div className="h-3 w-3 rounded-full border-2 border-cyan-400 bg-black" />
+                    <div className="flex-1 w-px bg-cyan-500/30 mt-2" />
+                  </div>
+
+                  <div>
+                    <p className="text-sm text-cyan-400">2026 - Present</p>
+
+                    <h4 className="text-white font-semibold mt-1 flex items-center gap-2">
+                      Secretary
+                      <span className="px-2 py-0.5 text-[10px] rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-400/20">
+                        Volunteer
+                      </span>
+                    </h4>
+
+                    <p className="text-gray-400 text-sm">Flair Club USJ</p>
+
+                    <ul className="mt-2 text-sm text-gray-400 list-disc ml-4 space-y-1">
+                      <li>
+                        Manage club documentation and administrative tasks
+                      </li>
+                      <li>
+                        Coordinate communication between members and organizers
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* ITEM 3 (FIXED) */}
                 <div className="flex gap-4 sm:gap-5">
                   <div className="relative flex flex-col items-center">
                     <div className="h-3 w-3 rounded-full border-2 border-cyan-400 bg-black" />
@@ -173,7 +212,7 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* ITEM 3 */}
+                {/* ITEM 4 */}
                 <div className="flex gap-4 sm:gap-5">
                   <div className="relative flex flex-col items-center">
                     <div className="h-3 w-3 rounded-full border-2 border-cyan-400 bg-black" />
@@ -221,13 +260,13 @@ export default function About() {
                       BComp (Hons) Software Engineering
                     </h4>
                     <p className="text-gray-400 text-sm">
-                      University of Sri Jayewardenepura
+                      Faculty of Computing, University of Sri Jayewardenepura
                     </p>
                     <div className="mt-2">
                       {" "}
                       <span className="px-3 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-400/20">
                         {" "}
-                        Faculty of Computing{" "}
+                        GPA : 3.48/4.0{" "}
                       </span>{" "}
                     </div>
                   </div>
