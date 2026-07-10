@@ -36,6 +36,29 @@ const data: { projects: Project[] } = {
     },
     {
       id: 3,
+      name: "Apex Analytics Gym Progress Tracker",
+      description:
+        "AI-powered full-stack gym tracker with workout logging, body progress monitoring, and LLaMA-driven fitness insights.",
+
+      category: "personal",
+      collaboration: "individual",
+      featured: true,
+
+      techStack: [
+        "ASP.NET Core",
+        "PostgreSQL",
+        "Supabase",
+        "Angular 20",
+        "TypeScript",
+        "Groq API",
+      ],
+
+      github: "https://github.com/Isivara2021/apex-analytics-client",
+      live: "https://apex-analytics-client.onrender.com",
+      image: "/projects/apexanalytics.png",
+    },
+    {
+      id: 4,
       name: "Portfolio System",
       description:
         "Modern developer portfolio built with Next.js, featuring glassmorphism UI, smooth animations, and responsive design.",
@@ -49,23 +72,6 @@ const data: { projects: Project[] } = {
       github: "https://github.com/Isivara2021/my-portfolio",
       live: "#",
       image: "/projects/portfolio.png",
-    },
-    {
-      id: 4,
-      name: "Skill Finder Mobile App",
-      description:
-        "Mobile application for finding and connecting with skilled professionals, built with Flutter and Firebase.",
-
-      category: "client",
-      collaboration: "group",
-      featured: false,
-
-      techStack: ["Flutter", "Firebase", "Dart"],
-
-      github:
-        "https://github.com/Isivara2021/skill_finder_mobile_app_for_a_client",
-      live: "#",
-      image: "/projects/skillfinder.jpeg",
     },
     {
       id: 5,
@@ -85,6 +91,23 @@ const data: { projects: Project[] } = {
     },
     {
       id: 6,
+      name: "Skill Finder Mobile App",
+      description:
+        "Mobile application for finding and connecting with skilled professionals, built with Flutter and Firebase.",
+
+      category: "client",
+      collaboration: "group",
+      featured: false,
+
+      techStack: ["Flutter", "Firebase", "Dart"],
+
+      github:
+        "https://github.com/Isivara2021/skill_finder_mobile_app_for_a_client",
+      live: "#",
+      image: "/projects/skillfinder.jpeg",
+    },
+    {
+      id: 7,
       name: "FashionVision AI",
       description:
         "End-to-end AI-powered fashion classification system with a modern analytics dashboard. Uses a CNN model trained on the Fashion-MNIST dataset to classify clothing images in real time with ~89% accuracy.",

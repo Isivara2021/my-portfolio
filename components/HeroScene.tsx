@@ -9,11 +9,10 @@ function FloatingField() {
   const points = useRef<THREE.Points>(null);
   const { viewport, mouse } = useThree();
 
-  // 🔥 Improved responsive density (MORE particles on mobile)
   const particleCount = useMemo(() => {
-    if (viewport.width < 4) return 380; // small phones
-    if (viewport.width < 6) return 420; // normal mobile / tablet
-    return 450; // laptop / desktop
+    if (viewport.width < 4) return 380;
+    if (viewport.width < 6) return 420;
+    return 450;
   }, [viewport.width]);
 
   const positions = useMemo(() => {
@@ -28,7 +27,6 @@ function FloatingField() {
       const ry = seeded(i + 101);
       const rz = seeded(i + 1001);
 
-      // 🔥 Better adaptive spread for mobile immersion
       const spread = viewport.width < 5 ? 14 : 12;
 
       pos[i * 3] = (rx - 0.5) * spread;
@@ -44,22 +42,22 @@ function FloatingField() {
 
     const t = state.clock.elapsedTime;
 
-    // base motion
-    points.current.rotation.y += 0.0006;
-    points.current.rotation.x = Math.sin(t * 0.1) * 0.06;
+    // 🔥 FASTER BASE ROTATION (main change)
+    points.current.rotation.y += 0.001;
+    points.current.rotation.x = Math.sin(t * 0.15) * 0.08;
 
-    // mouse interaction (liveness)
-    points.current.rotation.y += mouse.x * 0.0008;
-    points.current.rotation.x += mouse.y * 0.0005;
+    // 🔥 stronger mouse responsiveness
+    points.current.rotation.y += mouse.x * 0.0013;
+    points.current.rotation.x += mouse.y * 0.0008;
 
-    // floating drift
-    points.current.position.y = Math.sin(t * 0.3) * 0.15;
-    points.current.position.x = Math.cos(t * 0.25) * 0.1;
+    // 🔥 faster drift
+    points.current.position.y = Math.sin(t * 0.45) * 0.2;
+    points.current.position.x = Math.cos(t * 0.38) * 0.14;
 
-    // subtle flicker glow
+    // subtle flicker (slightly quicker)
     if (points.current.material) {
-      (points.current.material as THREE.PointsMaterial).opacity =
-        0.75 + Math.sin(t * 0.8) * 0.1;
+      const mat = points.current.material as THREE.PointsMaterial;
+      mat.opacity = 0.78 + Math.sin(t * 1.0) * 0.12;
     }
   });
 
@@ -70,7 +68,7 @@ function FloatingField() {
       </bufferGeometry>
 
       <pointsMaterial
-        size={viewport.width < 5 ? 0.038 : 0.05}
+        size={viewport.width < 5 ? 0.04 : 0.052}
         color="#5ef3ff"
         transparent
         opacity={0.88}
@@ -91,15 +89,16 @@ function OrbRings() {
 
     const t = state.clock.elapsedTime;
 
-    ref.current.rotation.z = t * 0.05;
-    ref.current.rotation.x = Math.sin(t * 0.12) * 0.2;
+    // 🔥 slightly faster orbit
+    ref.current.rotation.z = t * 0.065;
+    ref.current.rotation.x = Math.sin(t * 0.18) * 0.22;
 
-    // mouse responsiveness
-    ref.current.rotation.y = mouse.x * 0.2;
-    ref.current.rotation.x += mouse.y * 0.15;
+    // mouse influence stronger
+    ref.current.rotation.y = mouse.x * 0.28;
+    ref.current.rotation.x += mouse.y * 0.18;
 
-    // breathing scale
-    const scale = 1 + Math.sin(t * 0.6) * 0.03;
+    // breathing a bit faster
+    const scale = 1 + Math.sin(t * 0.75) * 0.04;
     ref.current.scale.set(scale, scale, scale);
   });
 
@@ -107,12 +106,12 @@ function OrbRings() {
     <group ref={ref}>
       <mesh position={[2.5, 0.5, -2]}>
         <torusGeometry args={[2.4, 0.015, 16, 200]} />
-        <meshBasicMaterial color="#00f5ff" transparent opacity={0.2} />
+        <meshBasicMaterial color="#00f5ff" transparent opacity={0.22} />
       </mesh>
 
       <mesh position={[-2.5, -0.5, -3]}>
         <torusGeometry args={[1.8, 0.015, 16, 200]} />
-        <meshBasicMaterial color="#7c3aed" transparent opacity={0.16} />
+        <meshBasicMaterial color="#7c3aed" transparent opacity={0.18} />
       </mesh>
     </group>
   );
@@ -167,8 +166,8 @@ export default function HeroScene() {
         </div>
       ) : (
         <SafeCanvas>
-          <ambientLight intensity={0.55} />
-          <directionalLight position={[3, 2, 5]} intensity={0.7} />
+          <ambientLight intensity={0.6} />
+          <directionalLight position={[3, 2, 5]} intensity={0.75} />
 
           <FloatingField />
           <OrbRings />

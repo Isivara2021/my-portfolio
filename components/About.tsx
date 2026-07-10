@@ -76,7 +76,7 @@ export default function About() {
               <div className="relative h-56 w-56 overflow-hidden rounded-2xl border border-cyan-500/30 bg-black/10 backdrop-blur-xl shadow-[0_0_40px_rgba(0,245,255,0.4)] sm:h-72 sm:w-72">
                 <Image
                   alt="Profile"
-                  src="/profile.jpg"
+                  src="/profile.png"
                   fill
                   sizes="(min-width: 640px) 288px, 224px"
                   className="object-cover"
@@ -166,9 +166,6 @@ export default function About() {
 
                     <h4 className="text-white font-semibold mt-1 flex items-center gap-2">
                       Secretary
-                      <span className="px-2 py-0.5 text-[10px] rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-400/20">
-                        Volunteer
-                      </span>
                     </h4>
 
                     <p className="text-gray-400 text-sm">Flair Club USJ</p>
@@ -196,9 +193,6 @@ export default function About() {
 
                     <h4 className="text-white font-semibold mt-1 flex items-center gap-2">
                       Editor
-                      <span className="px-2 py-0.5 text-[10px] rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-400/20">
-                        Volunteer
-                      </span>
                     </h4>
 
                     <p className="text-gray-400 text-sm">Flair Club USJ</p>
@@ -266,7 +260,7 @@ export default function About() {
                       {" "}
                       <span className="px-3 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-400/20">
                         {" "}
-                        GPA : 3.48/4.0{" "}
+                        GPA : 3.46/4.0{" "}
                       </span>{" "}
                     </div>
                   </div>
