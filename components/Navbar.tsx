@@ -63,7 +63,7 @@ export default function Navbar() {
 
         {/* CTA (desktop only) */}
         <a
-          href="/cv.pdf"
+          href="/RajapakseRKIM_CV.pdf"
           download
           className="group hidden min-w-[180px] items-center justify-center gap-2 rounded-full border border-cyan-500/30 bg-black/30 px-7 py-3 text-sm font-semibold text-cyan-200 backdrop-blur transition-all duration-300 hover:scale-110 hover:border-cyan-400 hover:bg-cyan-500/10 hover:shadow-[0_0_30px_rgba(0,255,255,0.2)] active:scale-95 md:inline-flex"
         >
@@ -75,7 +75,9 @@ export default function Navbar() {
         <details
           ref={detailsRef}
           className="relative md:hidden"
-          onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}
+          onToggle={(e) =>
+            setOpen((e.currentTarget as HTMLDetailsElement).open)
+          }
         >
           <summary
             aria-label="Toggle menu"
@@ -102,8 +104,8 @@ export default function Navbar() {
               ))}
               <li className="pt-2">
                 <a
-                  href="/cv.pdf"
-                  download
+                  href="/RajapakseRKIM_CV.pdf"
+                  download="RajapakseRKIM_CV.pdf"
                   onClick={() => {
                     setOpen(false);
                     if (detailsRef.current) detailsRef.current.open = false;

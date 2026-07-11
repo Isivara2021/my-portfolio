@@ -1,11 +1,5 @@
 import Container from "@/components/Container";
-import {
-  ArrowUpRight,
-  Github,
-  Linkedin,
-  Mail,
-  ArrowUp,
-} from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 
 const quickLinks = [
   { href: "#home", label: "Home" },
@@ -107,8 +101,8 @@ export default function Footer() {
 
             <div className="mt-5">
               <a
-                href="/cv.pdf"
-                download
+                href="/RajapakseRKIM_CV.pdf"
+                download="RajapakseRKIM_CV.pdf"
                 className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-black/30 px-4 py-2 text-sm font-semibold text-cyan-200 backdrop-blur transition hover:border-cyan-400/40 hover:bg-cyan-500/10 hover:shadow-[0_0_22px_rgba(0,245,255,0.10)]"
               >
                 Download CV <ArrowUpRight size={16} />
@@ -119,7 +113,6 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col gap-4 border-t border-cyan-500/10 pt-6 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between sm:text-sm">
-
           {/* Left */}
           <p>
             © {new Date().getFullYear()} Isivara Mahaushadha. All rights
@@ -140,7 +133,6 @@ export default function Footer() {
               Top
             </a>
           </div>
-
         </div>
 
         {/* Small glow accent */}
