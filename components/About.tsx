@@ -298,7 +298,7 @@ export default function About() {
                   </div>
 
                   <div>
-                    <p className="text-sm text-cyan-400">2019</p>
+                    <p className="text-sm text-cyan-400">2018</p>
                     <h4 className="text-white font-semibold mt-1">
                       G.C.E Ordinary Level
                     </h4>
