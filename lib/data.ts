@@ -86,7 +86,6 @@ const data: { projects: Project[] } = {
       techStack: ["Flutter", "MySQL", "Dart"],
 
       github: "https://github.com/Isivara2021/trade_analyzer_demo",
-      live: "#",
       image: "/projects/tradeanalyzer.png",
     },
     {
@@ -103,7 +102,6 @@ const data: { projects: Project[] } = {
 
       github:
         "https://github.com/Isivara2021/skill_finder_mobile_app_for_a_client",
-      live: "#",
       image: "/projects/skillfinder.jpeg",
     },
     {
@@ -129,7 +127,6 @@ const data: { projects: Project[] } = {
       ],
 
       github: "https://github.com/Isivara2021/fashion-classificaion",
-      live: "#",
       image: "/projects/fashionvision.png",
     },
   ],

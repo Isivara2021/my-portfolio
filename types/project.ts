@@ -5,11 +5,11 @@ export type Project = {
 
   category: "client" | "personal" | "Assignment";
   collaboration: "group" | "individual";
-  featured: boolean;
+  featured?: boolean;
 
   techStack: string[];
 
-  github: string;
-  live: string;
-  image: string;
+  github?: string;
+  live?: string;
+  image?: string;
 };
