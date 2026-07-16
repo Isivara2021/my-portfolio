@@ -84,20 +84,22 @@ export default function Contact() {
             <div className="space-y-4 lg:sticky lg:top-24">
               <a
                 href="mailto:isivara2021@gmail.com"
+                aria-label="Send email"
+                title="Send email"
                 className="flex items-center gap-3 rounded-xl border border-cyan-500/20 bg-black/40 p-4 backdrop-blur-xl transition hover:border-cyan-400 hover:shadow-[0_0_22px_rgba(0,245,255,0.14)]"
               >
                 <Mail size={18} className="text-cyan-400" />
-                <span className="break-all text-sm text-gray-300">
-                  isivara2021@gmail.com
-                </span>
+                <span className="text-sm text-gray-300">Email</span>
               </a>
 
               <a
                 href="tel:+94717926050"
+                aria-label="Call phone"
+                title="Call phone"
                 className="flex items-center gap-3 rounded-xl border border-cyan-500/20 bg-black/40 p-4 backdrop-blur-xl transition hover:border-cyan-400 hover:shadow-[0_0_22px_rgba(0,245,255,0.14)]"
               >
                 <Phone size={18} className="text-cyan-400" />
-                <span className="text-sm text-gray-300">+94 71 792 6050</span>
+                <span className="text-sm text-gray-300">Phone</span>
               </a>
 
               <a
